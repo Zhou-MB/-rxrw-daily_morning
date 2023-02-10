@@ -25,7 +25,7 @@ def get_weather():
     res = requests.get(url).json()
     weather = res['data']['list'][0]
     return weather['weather'], math.floor(weather['temp'])
-  else:  
+  except:  
     return "未知",404
 
 def get_count():
